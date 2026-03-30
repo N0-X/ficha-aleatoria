@@ -1,0 +1,407 @@
+/* =====================================
+   BASE
+===================================== */
+
+body {
+  margin: 0;
+  padding: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1e1f26;
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+/* =====================================
+   BOTÕES GERAIS
+===================================== */
+
+button {
+  background: #3a3f58;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+  padding: 4px 8px;
+}
+
+button:hover {
+  background: #5a62a3;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#backButton {
+  margin-bottom: 5px;
+}
+
+/* =====================================
+   CARD
+===================================== */
+
+.item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2b2d3a;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 6px 0;
+  gap: 20px;
+  transition: 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =====================================
+   COLUNA ESQUERDA
+===================================== */
+
+.card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  min-width: 120px;
+}
+
+.item-image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #555;
+  transition: 0.2s;
+}
+
+.name-row {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.initiative {
+  width: 30px;
+  height: 24px;
+  font-size: 13px;
+  text-align: center;
+  background: #2f334a;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+/* =====================================
+   COLUNA DIREITA
+===================================== */
+
+.card-right {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  flex: 1;
+}
+
+/* =====================================
+   CHARACTER PANEL HEADER
+===================================== */
+
+.character-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.character-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* =====================================
+   COUNTERS
+===================================== */
+
+.counterback {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #23242f;
+  padding: 4px 6px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+.counterback strong {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.counterback button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 13px;
+}
+
+.counterback input {
+  width: 30px;
+  height: 24px;
+  font-size: 13px;
+  text-align: center;
+  background: #2f334a;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+/* =====================================
+   ACTIONS CONTAINER
+===================================== */
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* =====================================
+   SIMPLES = GRID
+===================================== */
+
+.actions-simple {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+
+  background: rgba(255,255,255,0.02);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.actions-simple .action-group:last-child:nth-child(odd) {
+  grid-column: span 2;
+  justify-self: center;
+  width: 50%;
+}
+
+/* =====================================
+   COMPLEXAS = COLUNA
+===================================== */
+
+.actions-complex {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* =====================================
+   GRUPOS
+===================================== */
+
+.action-group {
+  width: 100%;
+}
+
+.action-group.simple .action-button {
+  width: 100%;
+  height: 50px;
+  
+}
+
+/* =====================================
+   BOTÕES DE AÇÃO
+===================================== */
+
+.action-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: 8px;
+  border: 1px solid #4a4f6a;
+
+  background: linear-gradient(145deg, #3a3f58, #2b2d3a);
+  color: white;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.action-button:hover {
+  background: #6a73c9;
+}
+
+.action-button:disabled {
+  opacity: 0.4;
+  background: #1a1b22;
+  cursor: not-allowed;
+}
+
+.action-label {
+  text-align: left;
+}
+
+.action-cost {
+  background: #1e1f26;
+  padding: 2px 6px;
+  border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: bold;
+  color: #8bd5ff;
+}
+
+/* =====================================
+   DIVISOR
+===================================== */
+
+.action-divider {
+  text-align: center;
+  font-size: 11px;
+  color: #888;
+  margin: 6px 0;
+}
+
+/* =====================================
+   TÍTULO DAS AÇÕES COMPLEXAS
+===================================== */
+
+.action-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ccc;
+  text-align: center;
+}
+
+/* =====================================
+   OPÇÕES (COMPLEXAS)
+===================================== */
+
+.action-options {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* =====================================
+   ROUND TRACKER
+===================================== */
+
+#roundTracker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  position: sticky;
+  bottom: 0;
+
+  background: #1e1f26;
+  padding: 10px 0;
+  margin-top: 10px;
+
+  z-index: 10;
+}
+
+#roundTracker button {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+
+#roundText {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 4px 10px;
+  background: #3a3f58;
+  border-radius: 6px;
+}
+
+/* =====================================
+   INPUTS
+===================================== */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  outline: 1px solid #8b7dff;
+}
+
+/* =====================================
+   TURNO ATIVO
+===================================== */
+
+.active-turn {
+  border: 2px solid #8b7dff;
+  background: linear-gradient(135deg, #3a3560, #2b2d3a);
+  box-shadow: 0 0 10px rgba(139, 125, 255, 0.4);
+}
+
+/* =====================================
+   CHARACTER PANEL ATIVO
+===================================== */
+
+.active-character {
+  background: linear-gradient(135deg, #3a3560, #1e1f26);
+  border: 1px solid #8b7dff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 12px rgba(139, 125, 255, 0.4);
+}
+
+/* =====================================
+   BANNER TURNO
+===================================== */
+
+.turn-banner {
+  background: #8b7dff;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* =====================================
+   UTIL
+===================================== */
+
+.hidden {
+  display: none;
+}
